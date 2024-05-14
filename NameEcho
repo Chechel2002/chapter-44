@@ -1,0 +1,24 @@
+//Rachel Nodalo
+//The program prompts the user to enter their name, processes the input to format the last name in all capital letters, and then outputs the name. The program also handles the case where there is only one name entered by the user.
+import java.util.Scanner;
+
+public class NameEcho {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name: ");// promts the user to enter a name
+        String fullName = scanner.nextLine().trim();
+
+        // Find the index of the space character
+        int spaceIndex = fullName.indexOf(" ");
+
+        // Check if there is a space character
+        if (spaceIndex > 0) {
+            String firstName = fullName.substring(0, spaceIndex);
+            String lastName = fullName.substring(spaceIndex + 1).toUpperCase();
+            System.out.println(firstName + " " + lastName);
+        } else {
+            // If there is no space character, echo the input
+            System.out.println(fullName);
+        }
+    }
+}
