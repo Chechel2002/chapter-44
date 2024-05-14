@@ -1,0 +1,23 @@
+//Nodalo, Rachel
+import java.util.Scanner;
+
+public class MicrowaveMenu {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter the time as a sequence of digits
+        System.out.print("Enter cook time-> ");
+        String input = scanner.nextLine().trim();
+
+        // Convert the input string to an integer
+        int time = Integer.parseInt(input);
+
+        // Calculate minutes and seconds
+        int minutes = time / 100; // Extract minutes from the first two digits
+        int seconds = time % 100; // Extract seconds from the last two digits
+
+        // Display the time as "minutes:seconds"
+        System.out.println("Your time-> " + minutes + ":" + String.format("%02d", seconds));
+    }
+}
+//When you run this program and input "123", it will display "1:23" as expected. If you input "23", it will display "0:23", and so on, following the specified logic.
