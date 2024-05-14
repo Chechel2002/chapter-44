@@ -1,0 +1,19 @@
+//Nodalo Rachel
+import java.util.Scanner;
+
+public class DocumentationPrinter{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read lines from input
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+
+            // Output lines that start with "//" or contain "Program" or "written by"
+            if (line.trim().startsWith("//") || line.contains("Program") || line.contains("written by")) {
+                System.out.println(line);
+            }
+        }
+    }
+}
+//This program reads lines from the input and outputs only those lines that start with "//" as well as lines that describe the program. You can use it with a Java source file as input to echo lines that describe the program.
