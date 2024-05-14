@@ -1,0 +1,17 @@
+//Nodalo Rachel
+//this program prompts the user to enter a string and then outputs each character of the string in a new line. This program uses the charAt(int index) method from the String class to get this.
+import java.util.Scanner;
+
+public class LinePerChar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+
+        // Loop through each character in the string and print it on a new line
+        for (int i = 0; i < inputString.length(); i++) {
+            System.out.println(inputString.charAt(i));
+        }
+    }
+}
+//This program reads a string from the user, iterates through each character of the string using the charAt(int index) method, and prints each character on a new line. This is to get the desired effect of outputting the string with one character per line.
