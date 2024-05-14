@@ -1,0 +1,24 @@
+//Nodalo Rachel
+//This program takes a word input from the user and then outputs the word once per line, with the first character replaced by a space and the last character removed in each iteration. The loop continues until no characters are left in the word.
+import java.util.Scanner;
+
+public class WordTriangle{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a word
+        System.out.print("Enter a word: ");
+        String word = scanner.nextLine();
+
+        int length = word.length();
+
+        // Process the word
+        for (int i = 0; i < length; i++) {
+            // Create a string with leading spaces and trailing characters removed
+            String modifiedWord = new String(new char[i]).replace('\0', ' ') + word.substring(i, length - 1);
+
+            // Output the modified word
+            System.out.println(modifiedWord);
+        }
+    }
+}
