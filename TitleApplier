@@ -1,0 +1,44 @@
+//Nodalo Rachel
+//This program correctly adds titles based on the predefined names and handles inputs as specified. The program prompts the user to enter a name, determines the appropriate title based on predefined lists of male and female names, and continues to prompt the user until an empty input is provided.
+import java.util.Scanner;
+
+public class TitleApplier {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] femaleNames = {"Amy", "Buffy", "Cathy"};
+        String[] maleNames = {"Elroy", "Fred", "Graham"};
+
+        while (true) {
+            System.out.print("Enter a name: ");
+            String fullName = scanner.nextLine().trim();
+
+            if (fullName.isEmpty()) {
+                break; // Exit the loop if the input is empty
+            }
+
+            String firstName = fullName.split(" ")[0];
+            String title = "";
+
+            // Determine the title based on the first name
+            if (isInArray(firstName, femaleNames)) {
+                title = "Ms. ";
+            } else if (isInArray(firstName, maleNames)) {
+                title = "Mr. ";
+            }
+
+            System.out.println(title + fullName);
+        }
+
+        scanner.close();
+    }
+
+    // Helper method to check if a name is in the given array
+    private static boolean isInArray(String name, String[] array) {
+        for (String item : array) {
+            if (name.equalsIgnoreCase(item)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
