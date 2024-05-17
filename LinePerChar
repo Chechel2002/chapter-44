@@ -2,9 +2,9 @@
 //this program prompts the user to enter a string and then outputs each character of the string in a new line. This program uses the charAt(int index) method from the String class to get this.
 import java.util.Scanner;
 
-public class LinePerChar {
+public class CharAt {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);rachel
         System.out.print("Enter a string: ");
         String inputString = scanner.nextLine();
 
